@@ -6,11 +6,33 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
     <title>Kleine Memeseite</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
 
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Add a click event on each of them
+            $navbarBurgers.forEach( el => {
+                el.addEventListener('click', () => {
+
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+
+                });
+            });
+
+        });
+    </script>
 </head>
 <body>
 <nav class="navbar has-background-primary" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand has-background-info" data-theme="dark">
+    <div class="navbar-brand has-background-white" data-theme="dark">
         <a class="navbar-item" href="https://github.com/Toto149/">
                 <svg width="420" height="160" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
                     <text x="25" y="90" font-family="Helvetica" font-size="100" fill="black">Toto</text>
@@ -109,8 +131,8 @@
             </div>
         </article>
     </div>
-        <div class="is-flex-wrap-wrap columns">
-            <div class="card is-half">
+        <div class="grid is-col-min-10">
+            <div class="card">
                 <div class="card-image">
                     <figure class="image is-128x128">
                         <img src="https://bulma.io/assets/images/placeholders/256x256.png" />
@@ -127,7 +149,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card is-half">
+            <div class="card">
                 <div class="card-image">
                     <figure class="image is-128x128">
                         <img src="https://bulma.io/assets/images/placeholders/256x256.png" />
@@ -146,11 +168,8 @@
             </div>
             <div class="card is-half">
                 <div class="card-image">
-                    <figure class="image is-256x256">
-                        <img
-                                src="https://bulma.io/assets/images/placeholders/1280x960.png"
-                                alt="Placeholder image"
-                        />
+                    <figure class="image is-128x128">
+                        <img src="https://bulma.io/assets/images/placeholders/256x256.png" />
                     </figure>
                 </div>
                 <div class="card">
@@ -166,11 +185,8 @@
             </div>
             <div class="card">
                 <div class="card-image">
-                    <figure class="image is-256x256">
-                        <img
-                                src="https://bulma.io/assets/images/placeholders/1280x960.png"
-                                alt="Placeholder image"
-                        />
+                    <figure class="image is-128x128">
+                        <img src="https://bulma.io/assets/images/placeholders/256x256.png" />
                     </figure>
                 </div>
                 <div class="card">
@@ -186,11 +202,8 @@
             </div>
             <div class="card">
                 <div class="card-image">
-                    <figure class="image is-256x256">
-                        <img
-                                src="https://bulma.io/assets/images/placeholders/1280x960.png"
-                                alt="Placeholder image"
-                        />
+                    <figure class="image is-128x128">
+                        <img src="https://bulma.io/assets/images/placeholders/256x256.png" />
                     </figure>
                 </div>
                 <div class="card">
